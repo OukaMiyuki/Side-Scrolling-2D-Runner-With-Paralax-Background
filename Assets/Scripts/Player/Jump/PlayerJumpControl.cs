@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerJumpControl : MonoBehaviour {
 
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip jumpClipSound;
     private float jumpForce = 12f;
     private float forwardForce = 0;
@@ -29,7 +30,7 @@ public class PlayerJumpControl : MonoBehaviour {
     public void Jump() {
         if (canJump) {
             canJump = false;
-            //AudioSource.PlayClipAtPoint(jumpClipSound, transform.position);
+            audioSource.PlayOneShot(jumpClipSound);
             if (transform.position.x < 0) {
                 forwardForce = 1f;
             } else {
