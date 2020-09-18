@@ -31,7 +31,7 @@ public class PlayerJumpControl : MonoBehaviour {
         if (canJump) {
             canJump = false;
             audioSource.PlayOneShot(jumpClipSound);
-            if (transform.position.x < 0) {
+            if (transform.position.x < 0) { // basically if the player's position less than 0 in x axes, then it'll move a little bit forward when jump
                 forwardForce = 1f;
             } else {
                 forwardForce = 0f;

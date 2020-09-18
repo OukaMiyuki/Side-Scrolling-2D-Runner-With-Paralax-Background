@@ -9,11 +9,11 @@ public class BGScaler : MonoBehaviour {
         var width = height * Screen.width / Screen.height;
 
         if (gameObject.name == "Background" ) {
-            transform.localScale = new Vector3(width, height, 0);
+            transform.localScale = new Vector3(width, height, 0); // scale the background based on the heigh and width
         }
 
         if (gameObject.name == "Ground" ) {
-            transform.localScale = new Vector3(width + 10f, 4, -2);
+            transform.localScale = new Vector3(width + 10f, 4, -2); // scale the ground
         }
     }
 }
